@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Noto+Sans+KR|Shadows+Into+Light|Sunflower:300&display=swap');
+
+.drag {
+  text-align: center;
+  border-top: 2px solid rgba(238, 238, 238, 0.9);
+  .drag-desc {
+    padding: 30px;
+    p {
+      padding: 10px;
+      font-family: 'Sunflower', sans-serif;
+    }
+  }
+
+  a {
+    display: inline;
+    background: none;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    .submit {
+      height: 40px;
+      width: 70px;
+      border: 2px solid black;
+      border-radius: 5px;
+      margin: 30px auto;
+      span {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.drag-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drag__solved-board {
+  position: relative;
+  background-size: cover;
+}
+
+.drag__solved-board:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.drag__solved-board {
+  margin: 20px auto;
+  width: 570px;
+  list-style-type: none;
+  padding: 0;
+  font-size: 0;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.drag__wall-board {
+  position: relative;
+  padding: 0;
+  div {
+    span {
+      font-family: 'Sunflower', sans-serif;
+    }
+  }
+  li {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: left;
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+  }
+}
+.drag__table-board {
+  position: relative;
+  div {
+    span {
+      font-family: 'Sunflower', sans-serif;
+    }
+  }
+  li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    border: 1px solid #ddd;
+  }
+}
+.drag li {
+  margin: 3px;
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  width: 49px;
+  height: 49px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.drag li:empty:hover:before {
+  opacity: 1;
+}
+
+.drag li img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  cursor: grab;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  border-radius: 5px;
+}
+
+.drag li img:hover {
+  z-index: 2;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.someone-seats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 50px;
+    border-radius: 5px;
+  }
+  span{
+    padding-top: 5px;
+    font-family: 'Sunflower', sans-serif;
+  }
+}
+
+
+.submit {
+  border: 1px solid grey;
+  display: inline-block;
+  padding: 13px 25px;
+  margin: 10px 0 30px 20px;
+  border-radius: 5px;
+  span {
+    font-size: 16px;
+    font-family: 'Sunflower', sans-serif;
+  }
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
