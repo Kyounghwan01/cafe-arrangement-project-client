@@ -28,7 +28,7 @@ export default class ShoppingCart extends Component {
     if (order.length && seatNumber) {
       //cafe의 배치 스키마 패치하는 함수
       try {
-        const res = await axios.post(`http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/seats/${tocken.substring(1)}`, {
+        const res = await axios.post(`https://api.knowgari.com/api/seats/${tocken.substring(1)}`, {
           cafeArrange: cafeArrange,
           order: order
         });

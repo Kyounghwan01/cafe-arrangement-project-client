@@ -8,7 +8,7 @@ import MenuTree from '../components/MenuTree';
 export default class ChangeMenu extends Component {
 
   render() {
-    const url = `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/cafes/menu/new/${this.props.tocken.substring(1)}`;
+    const url = `https://api.knowgari.com/api/cafes/menu/new/${this.props.tocken.substring(1)}`;
     return (
       <div>
         <Header element={this.props.headerElement} tocken={this.props.tocken} />

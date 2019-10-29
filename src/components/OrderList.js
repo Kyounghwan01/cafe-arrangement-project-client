@@ -7,7 +7,7 @@ export default class OrderList extends Component {
 
   changeComplete = async menuId => {
     const res = await axios.post(
-      `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/cafes/complete/${this.props.tocken.substring(1)}`,
+      `https://api.knowgari.com/api/cafes/complete/${this.props.tocken.substring(1)}`,
       {
         complete: true,
         id: menuId

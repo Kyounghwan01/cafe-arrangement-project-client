@@ -15,7 +15,7 @@ const Footer = () => {
             src='https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png'
           ></img>
         </a>
-        <a href='https://kyounghwan01.github.io/lala/'>
+        <a href='http://blog.knowgari.com/'>
           <img
             alt='blog'
             className='blog'

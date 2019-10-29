@@ -43,7 +43,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3"
   },
-  "proxy": "http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com",
+  "proxy": "https://api.knowgari.com",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

@@ -28,7 +28,7 @@ class ChangeSeats extends Component {
   }
 
   fetchTableData = async () => {
-    const res = await axios.get(`http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/view/${this.props.tocken.substring(1)}`);
+    const res = await axios.get(`https://api.knowgari.com/api/view/${this.props.tocken.substring(1)}`);
     if (!res.data.cafeData) {
       this.setState({ errorMessage: 'unauth' });
     } else {
@@ -108,7 +108,7 @@ class ChangeSeats extends Component {
   submitData = async () => {
     if (window.confirm('정말 저장하시겠습니까??')) {
       try {
-        await axios.post(`http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/cafes/seats/${this.props.tocken.substring(1)}`, {
+        await axios.post(`https://api.knowgari.com/api/cafes/seats/${this.props.tocken.substring(1)}`, {
           cafeArrange: this.state.solved
         });
         alert('저장되었습니다');

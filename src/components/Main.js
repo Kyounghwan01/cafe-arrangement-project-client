@@ -79,7 +79,7 @@ class Main extends Component {
   async extendTimes(that) {
     //2시간 연장 db, state 변경
     const extendTimeResult = await axios.post(
-      `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/extend/${that.props.tocken.substring(1)}`,
+      `https://api.knowgari.com/api/extend/${that.props.tocken.substring(1)}`,
       {
         index: this.state.extendTime.arrangeIndex
       }

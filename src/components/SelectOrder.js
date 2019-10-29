@@ -23,7 +23,7 @@ export default class SelectOrder extends Component {
   componentDidMount() {
     const fetchTableData = async () => {
       const res = await axios.get(
-        `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/view/${this.props.tocken.substring(1)}`
+        `https://api.knowgari.com/api/view/${this.props.tocken.substring(1)}`
       );
       if (!res.data.cafeData) {
         this.setState({ errorMessage: 'unauth' });
@@ -120,7 +120,7 @@ export default class SelectOrder extends Component {
   submitSeat = async () => {
     //cafe의 배치 스키마 패치하는 함수
     try {
-      await axios.post(`http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/seats/${this.props.tocken.substring(1)}`, {
+      await axios.post(`https://api.knowgari.com/api/seats/${this.props.tocken.substring(1)}`, {
         cafeArrange: this.state.arrange
       });
     } catch (e) {

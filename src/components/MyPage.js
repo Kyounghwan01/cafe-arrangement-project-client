@@ -15,7 +15,7 @@ export default class MyPage extends Component {
   componentDidMount() {
     const fetchData = async () => {
       const res = await axios.get(
-        `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/view/${window.location.href.slice(29)}`
+        `https://api.knowgari.com/api/view/${window.location.href.slice(29)}`
       );
       this.setState({ myData: res.data.userData[0] });
     };

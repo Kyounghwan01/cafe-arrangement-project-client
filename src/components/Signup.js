@@ -33,7 +33,7 @@ const Signup = () => {
             <span>이메일과 비밀번호를 입력해주세요.</span>
           </div>
           <div>{errorMessage()}</div>
-          <form className="form-signin" action="http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/signup" method="POST">
+          <form className="form-signin" action="https://api.knowgari.com/api/signup" method="POST">
             <div className="group">
               <input
                 type="email"

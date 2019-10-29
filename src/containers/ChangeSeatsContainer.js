@@ -11,7 +11,7 @@ const ChangeSeatsContainer = props => {
     props.checkUser(props.location.search);
     const fetchData = async () => {
       const res = await axios.get(
-        `http://itsmyseatvcserver-env.drc3wmhbci.ap-northeast-2.elasticbeanstalk.com/api/view${props.location.search.substring(1)}`
+        `https://api.knowgari.com/api/view/${props.location.search.substring(1)}`
       );
       if (res.data.cafeData) {
         setArr(res.data.cafeData.arrangemenet);
