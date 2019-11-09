@@ -15,7 +15,7 @@ export default class MyPage extends Component {
   componentDidMount() {
     const fetchData = async () => {
       const res = await axios.get(
-        `https://api.knowgari.com/api/view/${window.location.href.slice(29)}`
+        `https://api.knowgari.com/api/view/${window.location.href.slice(24)}`
       );
       this.setState({ myData: res.data.userData[0] });
     };
@@ -34,18 +34,18 @@ export default class MyPage extends Component {
                 PAGE.ROUTE_CHANGE_SEATS,
                 PAGE.ROUTE_LOG_OUT
               ]}
-              tocken={window.location.href.slice(28)}
+              tocken={window.location.href.slice(23)}
             />
           ) : (
             <Header
               element={[PAGE.ROUTE_MAIN, PAGE.ROUTE_ORDER, PAGE.ROUTE_LOG_OUT]}
-              tocken={window.location.href.slice(28)}
+              tocken={window.location.href.slice(23)}
             />
           )
         ) : (
           <Header
             element={[PAGE.ROUTE_MAIN, PAGE.ROUTE_ORDER, PAGE.ROUTE_LOG_OUT]}
-            tocken={window.location.href.slice(28)}
+            tocken={window.location.href.slice(23)}
           />
         )}
         <div className="my-page-container">
