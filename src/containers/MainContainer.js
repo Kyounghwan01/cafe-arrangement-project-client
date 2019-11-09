@@ -22,7 +22,7 @@ const MainContainer = props => {
       if (props.location.search) {
         try {
           const res = await axios.get(
-            `/api/${props.location.search.substring(1)}`
+            `https://api.knowgari.com/api/${props.location.search.substring(1)}`
           );
           if (res.data.admin) {
             checkAdmin(true);
