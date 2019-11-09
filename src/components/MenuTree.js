@@ -25,13 +25,14 @@ export default class MenuTree extends Component {
   };
 
   menuAndPriceChange = () => {
+    console.log(window.location.href.slice());
     let price = Math.floor(this.price.current.value / 100) * 100;
     if (
       window.confirm(
         `메뉴명 : ${this.name.current.value} 가격 : ${price}원이 맞나요?`
       )
     ) {
-      axios.post(`https://api.knowgari.com/api/cafes/menu/${window.location.href.slice(34)}`, {
+      axios.post(`https://api.knowgari.com/api/cafes/menu/${window.location.href.slice(37)}`, {
         name: this.name.current.value,
         price: price,
         id: this.state.updateModal.id,
