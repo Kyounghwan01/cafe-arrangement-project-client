@@ -18,52 +18,49 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      awdawdesrgdbd
+    <div className="Signup-container">
+      <Header element={[PAGE.ROUTE_MAIN, PAGE.ROUTE_SIGN_IN]} />
+      <div className="sign-container">
+        <div className="sign-title">
+          <span>회원가입</span>
+        </div>
+        <div className="sign-body">
+          <img
+            alt="signup img"
+            src="http://image.istarbucks.co.kr/common/img/util/mem/icon_find_sally.png"
+          />
+          <div>
+            <span>이메일과 비밀번호를 입력해주세요.</span>
+          </div>
+          <div>{errorMessage()}</div>
+          <form className="form-signin" action="https://api.knowgari.com/api/signup" method="POST">
+            <div className="group">
+              <input
+                type="email"
+                required
+                autoFocus
+                name="email"
+                placeholder="e-mail"
+              />
+              <input
+                type="password"
+                required
+                name="password"
+                placeholder="password"
+              />
+              <input
+                type="password"
+                required
+                name="password2"
+                placeholder="password를 한번 더 입력해 주세요"
+              />
+            </div>
+            <input className="submit" type="submit" value="회원가입" />
+          </form>
+        </div>
+      </div>
+      <Footer />
     </div>
-    // <div className="Signup-container">
-    //   <Header element={[PAGE.ROUTE_MAIN, PAGE.ROUTE_SIGN_IN]} />
-    //   <div className="sign-container">
-    //     <div className="sign-title">
-    //       <span>회원가입</span>
-    //     </div>
-    //     <div className="sign-body">
-    //       <img
-    //         alt="signup img"
-    //         src="http://image.istarbucks.co.kr/common/img/util/mem/icon_find_sally.png"
-    //       />
-    //       <div>
-    //         <span>이메일과 비밀번호를 입력해주세요.</span>
-    //       </div>
-    //       <div>{errorMessage()}</div>
-    //       <form className="form-signin" action="https://api.knowgari.com/api/signup" method="POST">
-    //         <div className="group">
-    //           <input
-    //             type="email"
-    //             required
-    //             autoFocus
-    //             name="email"
-    //             placeholder="e-mail"
-    //           />
-    //           <input
-    //             type="password"
-    //             required
-    //             name="password"
-    //             placeholder="password"
-    //           />
-    //           <input
-    //             type="password"
-    //             required
-    //             name="password2"
-    //             placeholder="password를 한번 더 입력해 주세요"
-    //           />
-    //         </div>
-    //         <input className="submit" type="submit" value="회원가입" />
-    //       </form>
-    //     </div>
-    //   </div>
-    //   <Footer />
-    // </div>
   );
 };
 
