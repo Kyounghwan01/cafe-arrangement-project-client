@@ -108,11 +108,13 @@ class ChangeSeats extends Component {
   submitData = async () => {
     if (window.confirm('정말 저장하시겠습니까??')) {
       try {
+        console.log(this.props.tocken.substring(1));
         await axios.post(`https://api.knowgari.com/api/cafes/seats/${this.props.tocken.substring(1)}`, {
           cafeArrange: this.state.solved
         });
         alert('저장되었습니다');
       } catch (e) {
+        console.log(e);
         this.setState({ errorMessage: e.message });
       }
     }
