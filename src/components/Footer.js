@@ -19,7 +19,7 @@ const Footer = () => {
           <img
             alt='blog'
             className='blog'
-            src='https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png'
+            src='https://cdn2.iconfinder.com/data/icons/social-media-black-white-1/1024/bw-4-512.png'
           ></img>
         </a>
       </div>
