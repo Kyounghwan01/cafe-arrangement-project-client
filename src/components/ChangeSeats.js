@@ -113,7 +113,6 @@ class ChangeSeats extends Component {
         });
         alert('저장되었습니다');
       } catch (e) {
-        console.log(e);
         this.setState({ errorMessage: e.message });
       }
     }
