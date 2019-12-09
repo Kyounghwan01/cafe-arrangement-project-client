@@ -28,6 +28,7 @@ const Login = () => {
           />
           <div>
             <span>이메일과 비밀번호를 입력해주세요.</span>
+            <span>관리자 계정(email : 1@1, password : 1)</span>
           </div>
           <div>{errorMessage()}</div>
           <form className="form-signin" action="https://api.knowgari.com/api/login" method="POST">

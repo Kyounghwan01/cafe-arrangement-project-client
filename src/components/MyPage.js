@@ -14,7 +14,6 @@ export default class MyPage extends Component {
   }
   componentDidMount() {
     const fetchData = async () => {
-      console.log(window.location.href.slice());
       const res = await axios.get(
         `https://api.knowgari.com/api/view/${window.location.href.slice(32)}`
       );
@@ -22,11 +21,6 @@ export default class MyPage extends Component {
     };
     fetchData();
   }
-//28
-//https://www.knowgari.com/m/mypage?eyJhbGciOiJIUzI1NiJ9.MUAx.WQNWCmb4wGJuhLolkJnmNVylLdBCpAOFk9ob5ycMIqw
-
-//36
-//https://www.knowgari.com/age?eyJhbGciOiJIUzI1NiJ9.MUAx.WQNWCmb4wGJuhLolkJnmNVylLdBCpAOFk9ob5ycMIqw
   render() {
     return (
       <div>
@@ -44,7 +38,7 @@ export default class MyPage extends Component {
           ) : (
             <Header
               element={[PAGE.ROUTE_MAIN, PAGE.ROUTE_ORDER, PAGE.ROUTE_LOG_OUT]}
-              tocken={window.location.href.slice(32)}
+              tocken={window.location.href.slice(31)}
             />
           )
         ) : (

@@ -25,7 +25,6 @@ export default class MenuTree extends Component {
   };
 
   menuAndPriceChange = () => {
-    console.log(window.location.href.slice());
     let price = Math.floor(this.price.current.value / 100) * 100;
     if (
       window.confirm(

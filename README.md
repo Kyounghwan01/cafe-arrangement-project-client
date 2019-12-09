@@ -126,6 +126,7 @@ TEST_DB_URL='mongodb+srv://mongodbUser:<password>@cluster0-9ockr.gcp.mongodb.net
 
 - n x n으로 자리 설정 기능
 - 소셜로그인 기능
+  - passport.js 사용 하여 소셜로그인 구현
 - 로컬 로그인 시 이메일 인증 후 회원가입
 - server test 보완
   - 로컬에서는 test가 통과하나 작성한 파일을 circle ci에 deploy하면 test가 통과하지 못하여, aws에 deploy가 되지 않음
